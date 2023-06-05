@@ -15,7 +15,7 @@ namespace dotnet_core_app.Entity
         //init  means we set our property value when creating instance of it.
         //and cannot access it later after initializing
         //i.e: Item item = new(){id=Guid.NewGuid()};
-        public string name { get; init; }
+        public string? name { get; init; }
         public decimal price { get; init; }
         public DateTimeOffset createDate { get; init; }
     }

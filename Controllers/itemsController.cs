@@ -16,7 +16,7 @@ namespace dotnet_core_app.Controllers
         constructor recieves an interface instead of
         instanciating an explicit class
         for achieveing decoupling
-        because depending on abstraction is better
+        because depending on abstractions is better
         than depending on classes*/
         public itemsController(IinMemRepo repo)
         {
