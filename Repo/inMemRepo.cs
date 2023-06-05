@@ -1,9 +1,8 @@
-using System.Linq;
 using dotnet_core_app.Entity;
 
 namespace dotnet_core_app.Repo
 {
-    public class inMemRepo
+    public class inMemRepo : IinMemRepo
     {
         private readonly List<Item> items =
             new()
@@ -31,14 +30,15 @@ namespace dotnet_core_app.Repo
                 },
             };
 
-        public IEnumerable<Item> GetItems()
+        public IEnumerable<Item> GetItems() //return items since items is private
         {
-            return items; //IEnumerable is an interface for returning a colletions of items
+            return items; //IEnumerable is an interface for returning a colletions of items in a List<T>
         }
 
-        public Item GetItem(Guid id)
+        public Item GetItem(Guid id) // return one item if not then null
         {
-            return items.Where(item => item.id == id).SingleOrDefault(); //if true return item else return null
+            var item = items.Where(item => item.id == id).SingleOrDefault(); //if true return item else return null
+            return item;
         }
     }
 }
