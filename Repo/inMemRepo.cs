@@ -30,7 +30,7 @@ namespace dotnet_core_app.Repo
                 },
             };
 
-        public IEnumerable<Item> GetItems() //return items since items is private
+        public IEnumerable<Item> GetItems() //return items since items list is private
         {
             return items; //IEnumerable is an interface for returning a colletions of items in a List<T>
         }
