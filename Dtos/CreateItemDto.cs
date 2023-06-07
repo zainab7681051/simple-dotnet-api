@@ -1,4 +1,4 @@
-namespace dotnet_core_app.Dtos
+namespace simple_dotnet_api.Dtos
 {
     public record CreateItemDto
     {

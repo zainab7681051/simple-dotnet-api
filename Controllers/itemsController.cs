@@ -1,11 +1,11 @@
-using dotnet_core_app.Dtos;
-using dotnet_core_app.Entity;
-// using dotnet_core_app.Entity; //not used
-using dotnet_core_app.Extensions;
-using dotnet_core_app.Repo;
 using Microsoft.AspNetCore.Mvc;
+using simple_dotnet_api.Dtos;
+using simple_dotnet_api.Entity;
+// using simple_dotnet_api.Entity; //not used
+using simple_dotnet_api.Extensions;
+using simple_dotnet_api.Repo;
 
-namespace dotnet_core_app.Controllers
+namespace simple_dotnet_api.Controllers
 {
     [ApiController]
     //applyting default core mvc api behavior to our controller class
@@ -63,7 +63,7 @@ namespace dotnet_core_app.Controllers
                 price = itemDto.price,
                 createDate = DateTimeOffset.UtcNow
             };//item object created
-            //now we need the inMemRepo method to add Item object to Items List
+              //now we need the inMemRepo method to add Item object to Items List
             repo.CreateItem(item);
 
             //(action name, route parameter value, the return object name)

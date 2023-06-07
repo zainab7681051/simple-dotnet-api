@@ -1,6 +1,6 @@
-using dotnet_core_app.Entity;
+using simple_dotnet_api.Entity;
 
-namespace dotnet_core_app.Repo
+namespace simple_dotnet_api.Repo
 {
     public class inMemRepo : IinMemRepo
     {

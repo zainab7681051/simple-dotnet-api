@@ -1,4 +1,4 @@
-using dotnet_core_app.Repo;
+using simple_dotnet_api.Repo;
 
 internal class Program
 {

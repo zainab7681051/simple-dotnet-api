@@ -1,4 +1,4 @@
-namespace dotnet_core_app.Entity
+namespace simple_dotnet_api.Entity
 {
     public record Item
     {

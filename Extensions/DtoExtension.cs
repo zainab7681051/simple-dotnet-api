@@ -3,10 +3,10 @@
 //NOTE extentions methods must be static
 //https://www.tutorialsteacher.com/csharp/csharp-extension-method
 
-using dotnet_core_app.Dtos;
-using dotnet_core_app.Entity;
+using simple_dotnet_api.Dtos;
+using simple_dotnet_api.Entity;
 
-namespace dotnet_core_app.Extensions
+namespace simple_dotnet_api.Extensions
 {
     public static class DtoExtention
     {

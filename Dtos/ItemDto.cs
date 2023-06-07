@@ -15,7 +15,7 @@ since we need all this. perhaps we can leave out the date of creation when retur
 by deleteing it in the dto class properties so it wont be included with returend data.
 nevertheless, it is an idea that will be useful in the future imo.
 */
-namespace dotnet_core_app.Dtos
+namespace simple_dotnet_api.Dtos
 {
     public record ItemDto
     {
