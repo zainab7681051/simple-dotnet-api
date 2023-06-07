@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace simple_dotnet_api.Dtos
 {
-    public record CreateItemDto
+    public record UpdateItemDto
     {
         [Required]//data annotations for required fields, name and price cannot be null 
         public string name { get; init; }

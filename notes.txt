@@ -11,5 +11,5 @@ they have the "this" keyword.
 
 7/6
 ✅ POST [HttpPost], CreateAtAction
-
+✅ Data Annotations [Required][Range(decimal min, decimal max)]
 

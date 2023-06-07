@@ -40,6 +40,7 @@ namespace simple_dotnet_api.Controllers
         [HttpGet("{id}")] //GET by id==> /items/2
         public ActionResult<ItemDto> GetItem(Guid id)
         {
+            //get item from items list from inMemItem repo
             var item = repo.GetItem(id);
             if (item is null)
             {
@@ -63,7 +64,7 @@ namespace simple_dotnet_api.Controllers
                 price = itemDto.price,
                 createDate = DateTimeOffset.UtcNow
             };//item object created
-              //now we need the inMemRepo method to add Item object to Items List
+            //now we need the inMemRepo method to add Item object to Items List
             repo.CreateItem(item);
 
             //(action name, route parameter value, the return object name)
@@ -77,6 +78,52 @@ namespace simple_dotnet_api.Controllers
             created resource.
             more at https://ochzhen.com/blog/created-createdataction-createdatroute-methods-explained-aspnet-core
             */
+        }
+
+        //PUT /items/id
+        [HttpPut("{id}")]
+        public ActionResult UpdateItem(Guid id, UpdateItemDto itemDto)
+        {
+            //get "Item item" by id from items List in item repo
+            var existingItem = repo.GetItem(id);
+            if (existingItem is null)
+            {
+                return NotFound();
+            }
+            //Item class is of the type "record" that has
+            //the "with" keyword which allows us to copy 
+            //records with different properties.
+            //here we want to copy the properties of
+            //an "Item existingItem" record to another one called
+            //"Item UpdatedItem" only with name and price of 
+            //"UpdateItemDto itemDto" that was send from the client side
+            Item UpdatedItem = existingItem with
+            {
+                name = itemDto.name,
+                price = itemDto.price
+            };
+            //replaces the old item in the items list
+            //with the new updated item
+            repo.UpdateItem(UpdatedItem);
+            //as per convention, PUT route returns status code 204, no content.
+            return NoContent();
+        }
+
+        //DELETE /items/id
+        [HttpDelete("{id}")]
+        public ActionResult DeleteItem(Guid id)
+        {
+            //find Item item
+            var existingItem = repo.GetItem(id);
+            //check if item is null
+            if (existingItem is null)
+            {
+                return NotFound();
+            }
+            //if not null then delete item
+            repo.DeleteItem(id);
+            //return status code 204, no content
+            return NoContent();
         }
     }
 }

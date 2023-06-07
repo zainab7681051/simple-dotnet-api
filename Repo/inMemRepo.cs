@@ -45,5 +45,20 @@ namespace simple_dotnet_api.Repo
         {
             items.Add(item);//add Item item to List<Item>
         }
+
+        public void UpdateItem(Item item)
+        {
+            //finds and returns the item in the list with the same id as the argument item 
+            var index = items.FindIndex(existingItem => existingItem.id == item.id);
+            //replaces the old item with new item
+            items[index] = item;
+        }
+        public void DeleteItem(Guid id)
+        {
+            //find the item whose id equals to id in argument
+            var index = items.FindIndex(existingItem => existingItem.id == id);
+            //deletes the item with "int index"
+            items.RemoveAt(index);
+        }
     }
 }
