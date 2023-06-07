@@ -12,4 +12,8 @@ they have the "this" keyword.
 7/6
 ✅ POST [HttpPost], CreateAtAction
 ✅ Data Annotations [Required][Range(decimal min, decimal max)]
-
+✅ PUT [HttpPut], DELETE [HttpDelete], both routes return no content-NoContent()
+-----------------------------------------------------------------------------------
+1:20:50-1:53:00 
+mongodb part
+-----------------------------------------------------------------------------------
