@@ -475,7 +475,3 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-
-#others
-notes.txt
-others.cs

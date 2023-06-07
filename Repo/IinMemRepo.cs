@@ -6,5 +6,6 @@ namespace dotnet_core_app.Repo
     {
         Item GetItem(Guid id);
         IEnumerable<Item> GetItems();
+        void CreateItem(Item item);
     }
 }

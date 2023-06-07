@@ -40,5 +40,10 @@ namespace dotnet_core_app.Repo
             var item = items.Where(item => item.id == id).SingleOrDefault(); //if true return item else return null
             return item;
         }
+
+        public void CreateItem(Item item)
+        {
+            items.Add(item);//add Item item to List<Item>
+        }
     }
 }

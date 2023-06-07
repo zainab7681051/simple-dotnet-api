@@ -20,7 +20,7 @@ namespace dotnet_core_app.Dtos
     public record ItemDto
     {
         public Guid id { get; init; }
-        public string? name { get; init; }
+        public string name { get; init; }
         public decimal price { get; init; }
         public DateTimeOffset createDate { get; init; }
     }

@@ -17,7 +17,7 @@ namespace dotnet_core_app.Entity
         //and cannot access it later after initializing
         //i.e: correct==> Item item = new(){id=Guid.NewGuid()};
         //incorrect ==> Item item= new(); item.id=Guid.NewGuid();
-        public string? name { get; init; }
+        public string name { get; init; }
         public decimal price { get; init; }
         public DateTimeOffset createDate { get; init; }
     }
