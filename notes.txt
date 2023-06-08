@@ -17,3 +17,5 @@ they have the "this" keyword.
 1:20:50-1:53:00 
 mongodb part
 -----------------------------------------------------------------------------------
+create static files and set file path in program.cs 
+set up sqlite database 

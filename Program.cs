@@ -46,7 +46,8 @@ internal class Program
             app.UseSwagger();
             app.UseSwaggerUI();
         }
-
+        // app.UseDefaultFiles(); //for defoult static files path. defult is wwwroot folder
+        // app.UseStaticFiles(); //for html/css/js files
         app.UseHttpsRedirection();
 
         app.UseAuthorization();
