@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using simple_dotnet_api.Dtos;
 using simple_dotnet_api.Entity;
-// using simple_dotnet_api.Entity; //not used
 using simple_dotnet_api.Extensions;
 using simple_dotnet_api.Repo;
 
